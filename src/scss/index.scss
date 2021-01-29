@@ -1,0 +1,53 @@
+:root {
+    --sr-black: #282D33;
+    --sr-dark-grey: #5D6978;
+    --sr-link-grey: #818E9E;
+    --sr-secondary-text: #A6ABAE;
+    --sr-light-grey: #E6E8EC;
+    --sr-bg-grey: #F7F8F9;
+    --sr-white: #ffffff;
+
+    --sr-primary: #09305d;
+    --sr-success: #3AAA81;
+    --sr-error: #F4541D;
+    --sr-warning: #F8AF24;
+    --sr-info: #3394F3;
+
+    --sr-gold: #eaa159;
+    --sr-hover-green: #619D01;
+    --sr-light-green: #AAE600;
+}
+
+@import "variables";
+
+.page-title {
+    margin-bottom: 1.5rem;
+}
+
+.navigation-menu {
+    padding-top: 100px;
+}
+
+.v-app-bar.v-app-bar--fixed {
+    z-index: 7 !important;
+}
+
+.v-toolbar__content {
+    padding: 4px 30px !important;
+}
+
+.logo {
+    color: #fff;
+    font-size: 22px;
+    position: relative;
+    letter-spacing: 1.5px;
+    font-family: 'Montserrat', sans-serif;
+
+    svg {
+        position: absolute;
+        color: var(--sr-gold);
+        top: -13px;
+        right: 17px;
+        transform: rotate(-20deg);
+    }
+}
