@@ -26,15 +26,24 @@
       text
       border="left"
     >Weboldala no index, no follow beállításra van állítva! Így a keresőmotorok nem indexelik!</v-alert>
+    <v-alert
+      class="mt-16 d-flex align-center"
+      text
+      color="info"
+    >
+      Az oldalon még további <strong>10</strong> potenciálisan javítandó SEO probléma van. Válts <strong>PRÉMIUM</strong> csomagra és tudd meg mivel tehetnél többet!
+      <onboarding/>
+    </v-alert>
   </div>
 </template>
 
 <script>
+import Onboarding from '@/components/Onboarding'
+
 export default {
-  name: 'Notifications'
+  name: 'Notifications',
+  components: {
+    Onboarding
+  }
 }
 </script>
-
-<style scoped>
-
-</style>

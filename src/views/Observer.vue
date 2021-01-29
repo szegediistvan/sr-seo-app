@@ -99,6 +99,33 @@
                   :success-message="`A megadott <strong>'${keyword}'</strong> kulcsszó szerepel a <strong>bevezető szöveg</strong>ben`"
                   :error-message="`A megadott <strong>'${keyword}'</strong> kulcsszó nem szerepel a <strong>bevezető szöveg</strong>ben`"
                 />
+                <keyword-checker
+                  :valid="false"
+                  :success-message="`Az oldalon található <strong>h2</strong> elemben szerepel a <strong>'${keyword}'</strong> kulcsszó`"
+                  :error-message="`Az oldalon található <strong>h2</strong> elemben nem szerepel a <strong>'${keyword}'</strong> kulcsszó`"
+                />
+                <keyword-checker
+                  :valid="false"
+                  :success-message="`Az oldalon található <strong>h3</strong> elemben szerepel a <strong>'${keyword}'</strong> kulcsszó`"
+                  :error-message="`Az oldalon található <strong>h3</strong> elemben nem szerepel a <strong>'${keyword}'</strong> kulcsszó`"
+                />
+                <keyword-checker
+                  :valid="false"
+                  :success-message="`Az oldalon <strong>7</strong> darab kép van, aminél hiányzik az <strong>alt</strong> attributum értéke`"
+                  :error-message="`Az oldalon <strong>7</strong> darab kép van, aminél hiányzik az <strong>alt</strong> attributum értéke`"
+                />
+                <keyword-checker
+                  :valid="false"
+                  :success-message="`A blog cikk több mint <strong>2000</strong> karaktert tartalmaz`"
+                  :error-message="`A blog cikk kevesebb mint <strong>2000</strong> karaktert tartalmaz`"
+                />         <v-alert
+                class="mt-6 d-flex align-center"
+                text
+                color="info"
+              >
+                Az oldalon még további <strong>10</strong> potenciálisan javítandó SEO probléma van. Válts <strong>PRÉMIUM</strong> csomagra és tudd meg mivel tehetnél többet!
+                <onboarding/>
+              </v-alert>
               </div>
             </transition>
           </v-card-text>
@@ -111,13 +138,15 @@
 <script>
 import GooglePreview from '@/components/GooglePreview'
 import KeywordChecker from '@/components/KeywordChecker'
+import Onboarding from '@/components/Onboarding'
 import axios from 'axios'
 
 export default {
   name: 'Observer',
   components: {
     KeywordChecker,
-    GooglePreview
+    GooglePreview,
+    Onboarding
   },
   data () {
     return {

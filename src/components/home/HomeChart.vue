@@ -9,7 +9,7 @@
         <v-sparkline
           :value="value"
           color="rgba(255, 255, 255, .7)"
-          height="100"
+          height="87"
           padding="24"
           stroke-linecap="round"
           smooth
@@ -23,7 +23,7 @@
 
     <v-card-text>
       <div class="display-1 font-weight-thin">
-        Sales Last 24h
+        Utolsó 24 óra
       </div>
     </v-card-text>
 
@@ -34,7 +34,7 @@
         block
         text
       >
-        Go to Report
+        Megnézem az elemzést
       </v-btn>
     </v-card-actions>
   </v-card>
