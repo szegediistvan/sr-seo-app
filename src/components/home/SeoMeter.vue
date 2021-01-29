@@ -11,6 +11,7 @@
             color="white"
             background-color="white"
             hover
+            readonly
             length="5"
             size="64"
             :value="3"
