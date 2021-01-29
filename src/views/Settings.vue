@@ -1,6 +1,6 @@
 <template>
   <div class="settings-page">
-    <h2 class="page-title">Settings</h2>
+    <h2 class="page-title">Beállítások</h2>
     <v-card>
       <v-card-text>
         <v-form>

@@ -1,6 +1,6 @@
 <template>
   <div class="observer-page">
-    <h2 class="page-title">Observer</h2>
+    <h2 class="page-title">Analízis</h2>
     <v-row>
       <v-col>
         <v-card color="primary" dark>
@@ -12,7 +12,7 @@
                 v-model="url"
               />
               <v-btn color="black" @click="getData" class="analyze-btn">
-                Analyze
+                Elemzés
               </v-btn>
             </div>
           </v-card-text>
@@ -79,19 +79,28 @@
           <v-card-text>
             <keyword-checker
               :valid="checkKeywordInText('sefUrl')"
-              :success-message="`A megadott <strong>${keyword}</strong> kulcsszó szerepel a <strong>keresőbarát URL</strong>-ben`"
-              :error-message="`A megadott <strong>${keyword}</strong> kulcsszó nem szerepel a <strong>keresőbarát URL</strong>-ben`"
+              :success-message="`A megadott <strong>'${keyword}'</strong> kulcsszó szerepel a <strong>keresőbarát URL</strong>-ben`"
+              :error-message="`A megadott <strong>'${keyword}'</strong> kulcsszó nem szerepel a <strong>keresőbarát URL</strong>-ben`"
             />
             <keyword-checker
               :valid="checkKeywordInText('metaTitle')"
-              :success-message="`A megadott <strong>${keyword}</strong> kulcsszó szerepel a <strong>meta title</strong>-ben`"
-              :error-message="`A megadott <strong>${keyword}</strong> kulcsszó nem szerepel a <strong>meta title</strong>-ben`"
+              :success-message="`A megadott <strong>'${keyword}'</strong> kulcsszó szerepel a <strong>meta title</strong>-ben`"
+              :error-message="`A megadott <strong>'${keyword}'</strong> kulcsszó nem szerepel a <strong>meta title</strong>-ben`"
             />
             <keyword-checker
               :valid="checkKeywordInText('metaDescription')"
-              :success-message="`A megadott <strong>${keyword}</strong> kulcsszó szerepel a <strong>meta leírás</strong>ban`"
-              :error-message="`A megadott <strong>${keyword}</strong> kulcsszó nem szerepel a <strong>meta leírás</strong>ban`"
+              :success-message="`A megadott <strong>'${keyword}'</strong> kulcsszó szerepel a <strong>meta leírás</strong>ban`"
+              :error-message="`A megadott <strong>'${keyword}'</strong> kulcsszó nem szerepel a <strong>meta leírás</strong>ban`"
             />
+            <transition name="fade">
+              <div v-if="loading">
+                <keyword-checker
+                  :valid="false"
+                  :success-message="`A megadott <strong>'${keyword}'</strong> kulcsszó szerepel a <strong>bevezető szöveg</strong>ben`"
+                  :error-message="`A megadott <strong>'${keyword}'</strong> kulcsszó nem szerepel a <strong>bevezető szöveg</strong>ben`"
+                />
+              </div>
+            </transition>
           </v-card-text>
         </v-card>
       </v-col>
@@ -112,6 +121,7 @@ export default {
   },
   data () {
     return {
+      loading: false,
       url: 'https://www.shoprenter.hu/blog/seo-trendek-2021-igy-optimalizalj-jovore',
       keyword: 'seo',
       sefUrl: 'seo-trendek-2021-igy-optimalizalj-jovore',
@@ -133,11 +143,10 @@ export default {
   },
   methods: {
     getData () {
-      console.log('clicked')
       axios
         .get('example.html')
         .then(response => (
-          console.log(response.data)
+          this.loading = true
         ))
     },
     checkKeywordInText (text) {

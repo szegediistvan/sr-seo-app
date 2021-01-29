@@ -1,6 +1,6 @@
 <template>
   <div class="notifications-page">
-    <h2 class="page-title">Notifications</h2>
+    <h2 class="page-title">Értesítések</h2>
     <v-alert
       type="error"
       text

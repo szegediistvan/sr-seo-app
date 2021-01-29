@@ -1,6 +1,6 @@
 <template>
   <div class="home-page">
-    <h2 class="page-title">Home page</h2>
+    <h2 class="page-title">Kezdőlap</h2>
     <v-row>
       <v-col md="6" cols="12">
         <home-chart color="orange"/>

@@ -23,13 +23,13 @@ export default {
 
   data: () => ({
     items: [
-      ['mdi-home-outline', 'Home', '/'],
-      ['mdi-text-search', 'Observer', '/observer'],
-      ['mdi-shield-alert-outline', 'Notifications', '/notifications'],
-      ['mdi-shield-check-outline', '301 checker', '301-checker'],
-      ['mdi-note-remove-outline', '404 page builder', '404-page-builder'],
-      ['mdi-cog-outline', 'Settings', 'settings'],
-      ['mdi-school-outline', 'Academy', 'academy']
+      ['mdi-home-outline', 'Kezdőlap', '/'],
+      ['mdi-text-search', 'Analízis', '/observer'],
+      ['mdi-shield-alert-outline', 'Értesítések', '/notifications'],
+      ['mdi-shield-check-outline', '301 ellenőrzés', '301-checker'],
+      ['mdi-note-remove-outline', '404-es hiba figyelő', '404-page-builder'],
+      ['mdi-cog-outline', 'Beállítások', 'settings'],
+      ['mdi-school-outline', 'Tudástár', 'academy']
     ]
   })
 }

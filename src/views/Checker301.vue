@@ -1,15 +1,15 @@
 <template>
   <div class="301-checker-page">
-    <h2 class="page-title">301 Checker</h2>
+    <h2 class="page-title">301 ellenőrzés</h2>
     <v-simple-table>
       <template v-slot:default>
         <thead>
         <tr>
           <th class="text-left">
-            Active Url
+            Aktív URL
           </th>
           <th class="text-left">
-            Redirection numbers
+            Átirányítások száma
           </th>
           <th class="text-left"></th>
         </tr>

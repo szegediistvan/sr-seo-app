@@ -1,6 +1,6 @@
 <template>
   <div class="404-page-builder-page">
-    <h2 class="page-title">404 page builder</h2>
+    <h2 class="page-title">404-es hiba figyelő</h2>
 
     <v-sheet
       :color="`grey ${theme.isDark ? 'darken-2' : 'lighten-4'}`"

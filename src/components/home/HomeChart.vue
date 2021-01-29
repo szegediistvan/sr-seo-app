@@ -3,7 +3,6 @@
     class="mx-auto text-center"
     :color="color"
     dark
-    max-width="600"
   >
     <v-card-text>
       <v-sheet color="rgba(0, 0, 0, .12)">

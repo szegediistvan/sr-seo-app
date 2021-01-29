@@ -1,6 +1,6 @@
 <template>
   <div class="academy-page">
-    <h2 class="page-title">Academy</h2>
+    <h2 class="page-title">Tudástár</h2>
     <v-row>
       <v-col md="6" lg="4" xl="3" cols="12">
         <v-card>
