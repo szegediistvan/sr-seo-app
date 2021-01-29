@@ -5,11 +5,16 @@
       <v-col>
         <v-card color="primary" dark>
           <v-card-text class="pa-3">
-            <v-text-field
-              outlined
-              hide-details
-              v-model="url"
-            />
+            <div class="analyze-wrapper">
+              <v-text-field
+                outlined
+                hide-details
+                v-model="url"
+              />
+              <v-btn color="black" @click="getData" class="analyze-btn">
+                Analyze
+              </v-btn>
+            </div>
           </v-card-text>
         </v-card>
       </v-col>
@@ -97,6 +102,8 @@
 <script>
 import GooglePreview from '@/components/GooglePreview'
 import KeywordChecker from '@/components/KeywordChecker'
+import axios from 'axios'
+
 export default {
   name: 'Observer',
   components: {
@@ -125,6 +132,14 @@ export default {
     }
   },
   methods: {
+    getData () {
+      console.log('clicked')
+      axios
+        .get('example.html')
+        .then(response => (
+          console.log(response.data)
+        ))
+    },
     checkKeywordInText (text) {
       const textValue = this[text]
       const keywords = this.keyword.split(' ')

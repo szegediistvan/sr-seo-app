@@ -51,3 +51,13 @@
         transform: rotate(-20deg);
     }
 }
+
+.analyze-wrapper {
+    position: relative;
+}
+
+.analyze-btn {
+    position: absolute !important;
+    top: 5px;
+    right: 5px;
+}

@@ -1,9 +1,15 @@
 <template>
   <v-app>
     <v-app-bar height="100" color="primary" elevation="2" clipped-left dark app>
-      <div class="logo d-flex align-center">
-        <brand-icon class="mr-5" />
-        <h1>SEO Elf</h1>
+      <div class="d-flex justify-space-between align-center" style="width: 100%;">
+        <div class="logo d-flex align-center">
+          <brand-icon class="mr-5" />
+          <h1>SEO Elf</h1>
+        </div>
+        <v-avatar
+          color="orange"
+          size="50"
+        >SZI</v-avatar>
       </div>
     </v-app-bar>
 
