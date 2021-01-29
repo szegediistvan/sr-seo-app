@@ -1,5 +1,5 @@
 <template>
-  <v-card color="green">
+  <v-card height="100%" color="green">
     <v-card-title class="d-flex justify-space-between">
       <h3>SEO meter</h3>
       <h4>3/5</h4>
@@ -18,7 +18,7 @@
         </v-sheet>
       </div>
       <v-alert class="mt-5 mb-0 text-center">
-        Szeretnéd megtudni hogyan érheted el az 5/5-ös értéket? Válts <strong>PRÉMIUM</strong> csomagra és tudd meg mivel tehetnél többet!
+        <div>Szeretnéd megtudni hogyan érheted el az 5/5-ös értéket? Válts <strong>PRÉMIUM</strong> csomagra és tudd meg mivel tehetnél többet!</div>
         <onboarding/>
       </v-alert>
     </v-card-text>

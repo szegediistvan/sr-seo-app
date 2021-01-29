@@ -1,9 +1,9 @@
 <template>
   <div class="home-page">
     <h2 class="page-title">Kezdőlap</h2>
-    <v-row>
+    <v-row class="align-stretch">
       <v-col md="6" cols="12">
-        <v-card color="amber">
+        <v-card height="100%" color="amber">
           <v-card-text>
             <v-dialog
               v-model="dialog"
