@@ -50,6 +50,9 @@ export default {
   components: {
     HomeChart,
     SeoMeter
-  }
+  },
+  data: () => ({
+    dialog: false
+  })
 }
 </script>

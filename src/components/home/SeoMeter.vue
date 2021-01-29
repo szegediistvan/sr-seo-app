@@ -6,14 +6,14 @@
     </v-card-title>
     <v-card-text>
       <div class="text-center">
-        <v-sheet color="rgba(0, 0, 0, .12)">
+        <v-sheet class="py-10" color="rgba(0, 0, 0, .12)">
           <v-rating
             color="white"
             background-color="white"
             hover
             length="5"
             size="64"
-            value="3"
+            :value="3"
           ></v-rating>
         </v-sheet>
       </div>
