@@ -53,10 +53,32 @@
             src="https://www.shoprenter.hu/blog/wp-content/uploads/2020/05/seo_felujitas_600.jpg"
           ></v-img>
           <v-card-title>
-            <h3>Miért éri meg hosszútávon gondolkodni a SEO-ban? – Esettanulmány a felujitaswebaruhaz.hu-ról</h3>
+            <h3>Miért éri meg hosszútávon gondolkodni a SEO-ban?</h3>
           </v-card-title>
           <v-card-text>
             Mielőtt beleugranánk a nyárba, még van előttünk egy-két hónap, amit bőven tudunk arra használni, hogy az áruházunk optimalizálását előkészítsük.
+          </v-card-text>
+          <v-card-actions>
+            <v-btn
+              color="blue"
+              text
+            >
+              Részletek
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-col>
+      <v-col md="6" lg="4" xl="3" cols="12">
+        <v-card>
+          <v-img
+            height="200"
+            src="https://www.shoprenter.hu/blog/wp-content/uploads/2020/04/seo_600.jpg"
+          ></v-img>
+          <v-card-title>
+            <h3>Hogyan optimalizáld blogod SEO szempontból?</h3>
+          </v-card-title>
+          <v-card-text>
+            Keresőoptimalizált tartalmat gyártani elsőre nehéznek és bonyolultnak tűnhet, azonban már néhány egyszerű technika alkalmazásával sokat javíthatunk bejegyzéseink organikus találatok között elért helyezésein.
           </v-card-text>
           <v-card-actions>
             <v-btn

@@ -3,7 +3,7 @@
     <h2 class="page-title">Observer</h2>
     <v-row>
       <v-col>
-        <v-card>
+        <v-card color="primary" dark>
           <v-card-text class="pa-3">
             <v-text-field
               outlined
