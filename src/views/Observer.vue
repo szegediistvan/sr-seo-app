@@ -118,18 +118,34 @@
                   :valid="false"
                   :success-message="`A blog cikk több mint <strong>2000</strong> karaktert tartalmaz`"
                   :error-message="`A blog cikk kevesebb mint <strong>2000</strong> karaktert tartalmaz`"
-                />         <v-alert
-                class="mt-6 d-flex align-center"
-                text
-                color="info"
-              >
-                Az oldalon még további <strong>10</strong> potenciálisan javítandó SEO probléma van. Válts <strong>PRÉMIUM</strong> csomagra és tudd meg mivel tehetnél többet!
-                <onboarding/>
-              </v-alert>
+                />
+                <v-alert
+                  class="text-center mt-6"
+                  text
+                  color="info"
+                >
+                  <div>Az oldalon még további <strong>10</strong> potenciálisan javítandó SEO probléma van. Válts <strong>PRÉMIUM</strong> csomagra és tudd meg mivel tehetnél többet!</div>
+                  <onboarding/>
+                </v-alert>
               </div>
             </transition>
           </v-card-text>
         </v-card>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
+        <template v-if="loading">
+          <form-group>
+            <form-row label="Blog cikk szövege">
+              <v-card>
+                 <v-card-text>
+                   <div class="original-content" v-html="blogContent"></div>
+                 </v-card-text>
+              </v-card>
+            </form-row>
+          </form-group>
+        </template>
       </v-col>
     </v-row>
   </div>
@@ -151,6 +167,7 @@ export default {
   data () {
     return {
       loading: false,
+      blogContent: '',
       url: 'https://www.shoprenter.hu/blog/seo-trendek-2021-igy-optimalizalj-jovore',
       keyword: 'seo',
       sefUrl: 'seo-trendek-2021-igy-optimalizalj-jovore',
@@ -172,11 +189,13 @@ export default {
   },
   methods: {
     getData () {
+      const self = this
       axios
         .get('example.html')
-        .then(response => (
-          this.loading = true
-        ))
+        .then(function (response) {
+          self.loading = true
+          self.blogContent = response.data
+        })
     },
     checkKeywordInText (text) {
       const textValue = this[text]
